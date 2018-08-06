@@ -20,10 +20,25 @@
   <ion-refresher (ionRefresh)="reload($event)">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
+  <div class="smog good" style="background:url(assets/imgs/clouds.png) 25% 100% repeat-x">
+  </div>
+  <div class="pollution-back good" style="">
+    <ion-icon name="ios-nuclear-outline" class="pollution-sign"></ion-icon>
+    <div class="pollution-time">TODAY</div>
+    <div class="pollution-value">23</div>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+    <div class="aqi-extra" padding style="left:0">
+      Chandigarh
+    </div>
+    <div class="aqi-extra" padding style="right:0">
+      PM 2.5
+    </div>
+  </div>
+  <div class="aqi-status good">
+    <div class="aqi-readable">GOOD</div>
+    <div class="chart-container">
+      <canvas #barCanvas class="aqi-graph" style="height:250px">
+      </canvas>
+    </div>
+  </div>
 </ion-content>
